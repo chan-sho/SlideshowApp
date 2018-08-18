@@ -50,13 +50,6 @@ class ViewController: UIViewController {
         photo6 = UIImage(named:"photo6")
         
         photoImage.image = UIImage(named:"photo\(count)")
-        
-        //toNext.isEnabled = true // ボタン有効
-        //toNext.isEnabled = false // ボタン無効
-        //toBack.isEnabled = true // ボタン有効
-        //toBack.isEnabled = false // ボタン無効
-        //StartAndStopShow.isEnabled = true // ボタン有効
-        //StartAndStopShow.isEnabled = false // ボタン無効
     }
 
     override func didReceiveMemoryWarning() {
@@ -103,7 +96,7 @@ class ViewController: UIViewController {
         self.timer?.invalidate()
         self.timer = nil
         toNext.isEnabled = true // ボタン有効
-        toBack.isEnabled = true // ボタン無効
+        toBack.isEnabled = true // ボタン有効
         }
     }
     
@@ -111,7 +104,7 @@ class ViewController: UIViewController {
         self.timer?.invalidate()
         self.timer = nil
         toNext.isEnabled = true // ボタン有効
-        toBack.isEnabled = true // ボタン無効
+        toBack.isEnabled = true // ボタン有効
     }
     
 }
