@@ -12,6 +12,7 @@ class ViewControllerBigPhoto: UIViewController {
 
     @IBOutlet weak var buttonToBack: UIButton!
     @IBOutlet weak var bigPhotoImage: UIImageView!
+    //countBigを当初: Int!にしている時にはうまくいかなかった（初期値が無いとダメ？すぐにcountで上書きされるのになぜ？）
     var countBig: Int = 1
     
     override func viewDidLoad() {

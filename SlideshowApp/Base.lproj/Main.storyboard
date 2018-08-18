@@ -80,7 +80,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="StartAndStopShow" destination="bfT-DF-lBQ" id="SN6-VT-ExJ"/>
                         <outlet property="photoImage" destination="dyn-Lf-CLT" id="z1k-1d-aob"/>
+                        <outlet property="toBack" destination="7lY-Uk-4v2" id="icI-eB-E0H"/>
+                        <outlet property="toNext" destination="KCR-32-6Z8" id="j5J-f6-CwE"/>
                         <segue destination="6cI-wL-txF" kind="show" identifier="GoToBigPhoto" id="0I7-83-6Yu"/>
                     </connections>
                 </viewController>
