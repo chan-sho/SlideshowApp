@@ -12,7 +12,7 @@ class ViewControllerBigPhoto: UIViewController {
 
     @IBOutlet weak var buttonToBack: UIButton!
     @IBOutlet weak var bigPhotoImage: UIImageView!
-    var countBig: Int!
+    var countBig: Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,7 @@ class ViewControllerBigPhoto: UIViewController {
         buttonToBack.titleLabel?.font = UIFont.systemFont(ofSize: 20)
         buttonToBack.layer.borderWidth = 2.0
         buttonToBack.layer.cornerRadius = 10.0 //丸みを数値で変更できる
-        bigPhotoImage.image = UIImage(named:"photo\(countBig)")
+        bigPhotoImage.image = UIImage(named:"photo\(self.countBig)")
     }
     
     override func didReceiveMemoryWarning() {

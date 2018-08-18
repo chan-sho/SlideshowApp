@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var photoImage: UIImageView!
+    //以下のphoto1~6は本当はいらない？？　→そもそもphotoを同じファイル名でアップしている為（先生に確認！）
     var photo1: UIImage!
     var photo2: UIImage!
     var photo3: UIImage!
@@ -23,8 +24,16 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "GoToBigPhoto", sender: nil)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "GoToBigPhoto" {
+            let viewControllerBigPhoto : ViewControllerBigPhoto = segue.destination as! ViewControllerBigPhoto
+            viewControllerBigPhoto.countBig = self.count
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //以下のphoto1~6は本当はいらない？？
         photo1 = UIImage(named:"photo1")
         photo2 = UIImage(named:"photo2")
         photo3 = UIImage(named:"photo3")
@@ -63,11 +72,5 @@ class ViewController: UIViewController {
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let viewControllerBigPhoto : ViewControllerBigPhoto = segue.destination as! ViewControllerBigPhoto
-        viewControllerBigPhoto.countBig = count
-    }
-
-
 }
 
