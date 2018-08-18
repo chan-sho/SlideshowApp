@@ -54,7 +54,6 @@ class ViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func toNext(_ sender: Any) {
@@ -89,22 +88,22 @@ class ViewController: UIViewController {
         case nil:
         self.photoImage.image = UIImage(named:"photo\(count)")
         self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(onTimer(_:)), userInfo: nil, repeats: true)
-        toNext.isEnabled = false // ボタン無効
-        toBack.isEnabled = false // ボタン無効
+        toNext.isEnabled = false
+        toBack.isEnabled = false
         
         default:
         self.timer?.invalidate()
         self.timer = nil
-        toNext.isEnabled = true // ボタン有効
-        toBack.isEnabled = true // ボタン有効
+        toNext.isEnabled = true
+        toBack.isEnabled = true
         }
     }
     
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
         self.timer?.invalidate()
         self.timer = nil
-        toNext.isEnabled = true // ボタン有効
-        toBack.isEnabled = true // ボタン有効
+        toNext.isEnabled = true
+        toBack.isEnabled = true
     }
     
 }
