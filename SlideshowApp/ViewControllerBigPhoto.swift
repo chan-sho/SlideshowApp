@@ -13,8 +13,7 @@ class ViewControllerBigPhoto: UIViewController {
     @IBOutlet weak var buttonToBack: UIButton!
     @IBOutlet weak var bigPhotoImage: UIImageView!
     
-    //countBigを当初: Int!にしている時にはうまくいかなかった（初期値が無いとダメ？すぐにcountで上書きされるのになぜ？）
-    var countBig: Int = 1
+    var countBig: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +22,7 @@ class ViewControllerBigPhoto: UIViewController {
         buttonToBack.titleLabel?.font = UIFont.systemFont(ofSize: 20)
         buttonToBack.layer.borderWidth = 2.0
         buttonToBack.layer.cornerRadius = 10.0
-        bigPhotoImage.image = UIImage(named:"photo\(self.countBig)")
+        bigPhotoImage.image = UIImage(named:"photo\(self.countBig!)")
     }
     
     override func didReceiveMemoryWarning() {

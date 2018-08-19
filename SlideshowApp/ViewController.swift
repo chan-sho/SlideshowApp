@@ -17,13 +17,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var StartAndStopShow: UIButton!
     
     var timer: Timer?
-    //以下のphoto1~6は本当はいらない？？　→そもそもphotoを同じファイル名でアップしている為（先生に確認！）
-    var photo1: UIImage!
-    var photo2: UIImage!
-    var photo3: UIImage!
-    var photo4: UIImage!
-    var photo5: UIImage!
-    var photo6: UIImage!
     
     var count: Int = 1
     
@@ -41,14 +34,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //以下のphoto1~6は本当はいらない？？　→そもそもphotoを同じファイル名でアップしている為（先生に確認！）
-        photo1 = UIImage(named:"photo1")
-        photo2 = UIImage(named:"photo2")
-        photo3 = UIImage(named:"photo3")
-        photo4 = UIImage(named:"photo4")
-        photo5 = UIImage(named:"photo5")
-        photo6 = UIImage(named:"photo6")
-        
         photoImage.image = UIImage(named:"photo\(count)")
     }
 
