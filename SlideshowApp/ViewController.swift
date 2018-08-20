@@ -75,12 +75,14 @@ class ViewController: UIViewController {
         self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(onTimer(_:)), userInfo: nil, repeats: true)
         toNext.isEnabled = false
         toBack.isEnabled = false
+        StartAndStopShow.setTitle("停止", for: UIControlState.normal)
         
         default:
         self.timer?.invalidate()
         self.timer = nil
         toNext.isEnabled = true
         toBack.isEnabled = true
+        StartAndStopShow.setTitle("再生", for: UIControlState.normal)
         }
     }
     
@@ -89,6 +91,7 @@ class ViewController: UIViewController {
         self.timer = nil
         toNext.isEnabled = true
         toBack.isEnabled = true
+        StartAndStopShow.setTitle("再生", for: UIControlState.normal)
     }
     
 }

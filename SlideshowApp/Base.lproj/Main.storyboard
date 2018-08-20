@@ -19,37 +19,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCR-32-6Z8">
-                                <rect key="frame" x="77" y="453.5" width="60" height="35"/>
+                                <rect key="frame" x="238" y="454" width="60" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="77F-bJ-4Bu"/>
                                     <constraint firstAttribute="height" constant="35" id="j9c-ml-3KW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="進む"/>
+                                <state key="normal" title="進む▶︎"/>
                                 <connections>
                                     <action selector="toNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="amI-WJ-c7F"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7lY-Uk-4v2">
-                                <rect key="frame" x="157" y="453.5" width="60" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="NcA-QM-2hs"/>
-                                    <constraint firstAttribute="width" constant="60" id="qlr-YS-nv1"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="戻る"/>
-                                <connections>
-                                    <action selector="toBack:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WKN-Lh-1Y4"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfT-DF-lBQ">
-                                <rect key="frame" x="237" y="453.5" width="90" height="35"/>
+                                <rect key="frame" x="158" y="453.5" width="60" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="7AO-mi-Pgr"/>
-                                    <constraint firstAttribute="width" constant="90" id="XqW-7z-aEb"/>
+                                    <constraint firstAttribute="width" constant="60" id="OE7-69-24V"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="開始/停止"/>
+                                <state key="normal" title="開始"/>
                                 <connections>
                                     <action selector="StartAndStopShow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q9n-ga-xOn"/>
                                 </connections>
@@ -65,17 +53,29 @@
                                     <outletCollection property="gestureRecognizers" destination="dVW-Bu-6Rp" appends="YES" id="Y1F-oQ-bSl"/>
                                 </connections>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7lY-Uk-4v2">
+                                <rect key="frame" x="78" y="454" width="60" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="NcA-QM-2hs"/>
+                                    <constraint firstAttribute="width" constant="60" id="qlr-YS-nv1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="◀︎戻る"/>
+                                <connections>
+                                    <action selector="toBack:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WKN-Lh-1Y4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="bfT-DF-lBQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0pQ-oZ-vrw"/>
+                            <constraint firstItem="7lY-Uk-4v2" firstAttribute="top" secondItem="dyn-Lf-CLT" secondAttribute="bottom" constant="20" id="2C7-YH-5eb"/>
+                            <constraint firstItem="KCR-32-6Z8" firstAttribute="leading" secondItem="bfT-DF-lBQ" secondAttribute="trailing" constant="20" id="8sS-7w-Iaf"/>
                             <constraint firstItem="dyn-Lf-CLT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AIH-16-WGH"/>
-                            <constraint firstItem="7lY-Uk-4v2" firstAttribute="leading" secondItem="KCR-32-6Z8" secondAttribute="trailing" constant="20" id="D3G-3h-CLi"/>
                             <constraint firstItem="dyn-Lf-CLT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ftd-vh-I4d"/>
-                            <constraint firstItem="7lY-Uk-4v2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nrn-PC-sdf"/>
-                            <constraint firstItem="bfT-DF-lBQ" firstAttribute="top" secondItem="dyn-Lf-CLT" secondAttribute="bottom" constant="20" id="hb1-nK-BIY"/>
-                            <constraint firstItem="7lY-Uk-4v2" firstAttribute="top" secondItem="dyn-Lf-CLT" secondAttribute="bottom" constant="20" id="oLw-Zc-Ctp"/>
-                            <constraint firstItem="KCR-32-6Z8" firstAttribute="top" secondItem="dyn-Lf-CLT" secondAttribute="bottom" constant="20" id="soW-Dv-OIO"/>
-                            <constraint firstItem="bfT-DF-lBQ" firstAttribute="leading" secondItem="7lY-Uk-4v2" secondAttribute="trailing" constant="20" id="tNO-PO-efo"/>
+                            <constraint firstItem="KCR-32-6Z8" firstAttribute="top" secondItem="dyn-Lf-CLT" secondAttribute="bottom" constant="20" id="KFI-vd-paF"/>
+                            <constraint firstItem="bfT-DF-lBQ" firstAttribute="leading" secondItem="7lY-Uk-4v2" secondAttribute="trailing" constant="20" id="Uw6-Od-FcX"/>
+                            <constraint firstItem="bfT-DF-lBQ" firstAttribute="top" secondItem="dyn-Lf-CLT" secondAttribute="bottom" constant="20" id="eiP-qn-CbP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
